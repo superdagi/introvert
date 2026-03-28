@@ -3,27 +3,9 @@
     <header class="site-header">
       <nav class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
-          <NuxtLink
-            to="/"
-            class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors"
-          >
-            Articles App
+          <NuxtLink to="/" class="text-xl font-bold text-gray-800">
+            Introversjon
           </NuxtLink>
-
-          <div class="flex items-center space-x-6">
-            <NuxtLink
-              to="/"
-              class="text-gray-600 hover:text-blue-600 transition-colors font-medium"
-            >
-              Home
-            </NuxtLink>
-            <div
-              v-if="false"
-              class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded"
-            >
-              🌐 EN/NO
-            </div>
-          </div>
         </div>
       </nav>
     </header>
@@ -33,6 +15,42 @@
     </main>
   </div>
 </template>
+
+<style>
+/* Global NuxtLink hover prevention */
+a {
+  text-decoration: none !important;
+  transition: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Remove any Tailwind hover classes at runtime */
+.hover\\:text-blue-600:hover,
+.hover\\:text-yellow-500:hover,
+.hover\\:text-gray-600:hover,
+.hover\\:text-gray-700:hover,
+.hover\\:text-gray-800:hover,
+.hover\\:text-gray-900:hover {
+  color: inherit !important;
+}
+
+.hover\\:scale-105:hover,
+.hover\\:scale-110:hover {
+  transform: none !important;
+}
+
+.transition-colors,
+.transition-all,
+.transition-transform {
+  transition: none !important;
+}
+</style>
 
 <style scoped>
 .site-header {

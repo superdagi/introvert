@@ -39,12 +39,14 @@
       </div>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <ArticleCard
-        v-for="article in filteredArticles"
-        :key="article._path"
-        :article="article"
-      />
+    <div class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 gap-7">
+        <ArticleCard
+          v-for="article in filteredArticles"
+          :key="article._path"
+          :article="article"
+        />
+      </div>
     </div>
   </div>
 </template>
