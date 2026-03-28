@@ -3,34 +3,34 @@
     <header class="site-header">
       <nav class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
-          <NuxtLink to="/" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+          <NuxtLink
+            to="/"
+            class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors"
+          >
             Articles App
           </NuxtLink>
-          
+
           <div class="flex items-center space-x-6">
-            <NuxtLink 
-              to="/" 
+            <NuxtLink
+              to="/"
               class="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               Home
             </NuxtLink>
-            <div class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
+            <div
+              v-if="false"
+              class="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded"
+            >
               🌐 EN/NO
             </div>
           </div>
         </div>
       </nav>
     </header>
-    
+
     <main class="main-content">
       <slot />
     </main>
-    
-    <footer class="bg-white border-t mt-12">
-      <div class="container mx-auto px-4 py-8 text-center text-gray-600">
-        <p>&copy; 2026 Articles App. All rights reserved.</p>
-      </div>
-    </footer>
   </div>
 </template>
 
