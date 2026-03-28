@@ -10,20 +10,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
   ],
 
-  // SEO Configuration
-  seo: {
-    redirectToCanonicalSiteUrl: true,
-  },
-
-  // Site Configuration
-  site: {
-    url: "https://your-domain.com",
-    name: "Introvert",
-    description:
-      "Din ultimate guide til introversjon. Artikler, tester og ressurser for introverte.",
-    defaultLocale: "no",
-  },
-
   // Content Configuration
   content: {
     highlight: {
@@ -60,19 +46,6 @@ export default defineNuxtConfig({
     exposeConfig: false,
   },
 
-  // Route Rules for Performance
-  routeRules: {
-    // Homepage pre-rendered at build time
-    "/": { prerender: true },
-    // Blog posts cached for 1 hour
-    "/blog/**": { isr: 3600 },
-    // Admin dashboard rendered on-demand
-    "/admin/**": { ssr: false },
-    // Static pages generated at build time
-    "/about": { prerender: true },
-    "/contact": { prerender: true },
-  },
-
   // Runtime Config
   runtimeConfig: {
     // Private keys (only available on server-side)
@@ -89,8 +62,23 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      title: "Introvert",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Din ultimate guide til introversjon. Artikler, tester og ressurser for introverte.",
+        },
+        { property: "og:title", content: "Introvert" },
+        {
+          property: "og:description",
+          content:
+            "Din ultimate guide til introversjon. Artikler, tester og ressurser for introverte.",
+        },
+        { property: "og:type", content: "website" },
+      ],
       htmlAttrs: {
-        lang: "en",
+        lang: "no",
       },
     },
   },
